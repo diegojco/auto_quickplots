@@ -1,0 +1,44 @@
+# Automatized Quickplots for ECHAM6 output.
+#
+# Authors: Renate Brokopf (Quickplots script)
+#          Diego Jiménez de la Cuesta Otero (Automatization)
+#
+# This script processes your output data and, based in your inputs, generates
+# job scripts for generating more diagnostic plots.
+#
+# It can manage several experiments at a time.
+#
+# Modify until before the job script writing.
+# You can set the variables with relevant values for your case.
+#
+# But modify the code itself under your responsibility.
+# First, understand the code or ask me. There are some advanced topics as
+# pattern recognition with regex in grep or sed.
+#
+# For questions about the job script, ask Renate Brokopf. She is the expert. I
+# only added an abstraction layer around the job script.
+#
+# Quickplot.job original file that I used as template can be found at:
+#
+# /pool/data/ECHAM6/post/QuickScripts/QuickPlot.job
+#
+# At the bottom of job script you can find information for further types than
+# annual climatological quickplots. For that end, you will need to modify
+# my code to calculate the corresponding climatologies. We can work on it
+# together or you can add this functionality on your own way.
+#
+# You can run the written Quickplot.job by yourself or using the flag
+# actplot with value 1. If this is the setting, then the script will run
+# sequentially over the Quickplot.job files for each processed experiment. This
+# is quick, compared to the processing part.
+#
+# Also, the calc flag allows you to toggle on/off the processing. If you
+# toggle it off, then it will ignore the processing and generation of scripts,
+# and will pass directly to the execution of them. Obviously, there will be a
+# failure if the scripts are not yet written. If you toggle it off and the
+# actplot flag is also set to 0, then the script will do nothing, except for a
+# list of experiments.
+#
+# If you modified the code, please make clear that you modified it, what is the
+# modification and include references to us... and, of course, add you as an
+# author.
