@@ -45,9 +45,21 @@
 # modification and include references to us... and, of course, add you as an
 # author.
 #
+#------------------------------------------------------------------------------
+#
+# In the following, in order to use it, substitute the placeholders (e.g.
+# <ide>) with the proper information. It might be different if you are
+# using another kind of directory structure for the model or working out-
+# side of MISTRAl (in which case, this script is useless or needs edits).
+#
+# It is also considering that the output is from MPI-ESM, therefore, the output
+# is inside outdata/echam6 subdirectory of experiment subdirectory.
+# Please check before usage.
+#
+#------------------------------------------------------------------------------
 
 workdir=/work/<project>/<user>/; # Where is your model.
-scratchdir=/scratch/<letter>/<user>/quickplotproc/; # Where you dump process files.
+scratchdir=/scratch/<letter>/<user>/quickplotproc/; # Where you dump files.
 mod=<mod>; # Model name.
 experimenter=<ide>; # Identifier of your experiments.
 actplot=1; # Flag to run the plotting code (actplot=1)... or not.
